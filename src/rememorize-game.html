@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="rememorize-game">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+      #game {
+        color: #00ff00;
+        font-size: 1.3em;
+        max-width: 1200px;
+        margin: auto;
+      }
+    </style>
+
+    <div id="game">
+      <button type="button" onClick="start()" name="button">Start Game</button>
+      <p id="gameplay">Hello</p>
+    </div>
+
+  </template>
+
+  <script>
+    class RememorizeGame extends Polymer.Element {
+      static get is() { return 'rememorize-game'; }
+    }
+    window.customElements.define(RememorizeGame.is, RememorizeGame);
+
+    function start() {
+      document.getElementById('gameplay').innerHTML = "Game Start!";
+    }
+  </script>
+</dom-module>
