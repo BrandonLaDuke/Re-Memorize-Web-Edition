@@ -17,20 +17,15 @@
     </style>
 
     <div id="game">
-      <button type="button" onClick="start()" name="button">Start Game</button>
-      <p id="gameplay">Hello</p>
+      <div class="gameplay">こにんちは</div>
     </div>
-
   </template>
 
   <script>
+
     class RememorizeGame extends Polymer.Element {
       static get is() { return 'rememorize-game'; }
     }
     window.customElements.define(RememorizeGame.is, RememorizeGame);
-
-    function start() {
-      document.getElementById('gameplay').innerHTML = "Game Start!";
-    }
   </script>
 </dom-module>
