@@ -92,12 +92,30 @@
         margin: auto;
       }
       #textBox {
+        z-index: 1;
         width: 100%;
         font-size: 1.3em;
         background-color: var(--app-secondary-color);
         color: var(--app-primary-color);
         border: none;
         border-bottom: 2px solid var(--app-primary-color);
+      }
+      .input {
+        z-index: 500;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        vertical-align: bottom;
+        position: fixed;
+        padding: 20px 10%;
+        background-color: var(--app-secondary-color);
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus,
+      button:focus {
+        outline: none;
       }
     </style>
   </head>
@@ -119,13 +137,16 @@
             <div main-title>Re:_Memorize</div>
           </app-toolbar>
         </app-header>
-
-        <div id="game">
-          <div id="gameplay"></div>
-          <div class="input">
-            <input id="textBox" type="text" name="" value="">
+        <div class="">
+          <div id="game">
+            <div id="gameplay"></div>
+            <div class="input">
+              <input id="textBox" type="text" name="" value="">
+            </div>
           </div>
+
         </div>
+
       </app-header-layout>
     </app-drawer-layout>
 

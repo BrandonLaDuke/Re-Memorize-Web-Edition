@@ -27,32 +27,49 @@ var satPatch1 = false;
 var satPatch2 = false;
 // Passcode
 var passcode = "";
-// set print
-var print = "";
 // Start Game
 document.ready = GameStart();
 
 
 // Game start
 function GameStart() {
-  print = "A friend once said,";
+  Print("A friend once said,");
+  Print("the memory of a single man is a fortress,");
+  Print("more complex than the vastest of cities.");
+  Print("We invented a key for that fortress.");
   Print();
-  print = "the memory of a single man is a fortress,";
-  Print();
-  print = "more complex than the vastest of cities.";
-  Print();
-  print = "We invented a key for that fortress.";
-  Print();
-
+  Print("Press Enter to continue.");
+  Read();
+  Clear();
+  Print("Hello");
 }
 
-function GetText() {
-  var getText = document.getElementById("");
+function Clear() {
+  document.onkeypress = function (e) {
+    e.keyCode = 13 || window.event;
+    // use e.keyCode
+    document.getElementById("gameplay").innerHTML("");
+  };
 }
 
-function Print() {
+function Read() {
+  document.onkeypress = function (e) {
+    e.keyCode = 13 || window.event;
+    // use e.keyCode
+    Print("Whatup?");
+  };
+}
+
+function Print(print) {
   var createE = document.createElement("P");
-  var text = document.createTextNode(print);
-      createE.appendChild(text);
-      document.getElementById("gameplay").appendChild(createE);
+  if (print == null || print == "") {
+    var linebreak = document.createElement("br");
+    createE.appendChild(linebreak);
+    document.getElementById("gameplay").appendChild(createE);
+  } else {
+    var text = document.createTextNode(print);
+    createE.appendChild(text);
+    document.getElementById("gameplay").appendChild(createE);
+  }
+  //Scroll after input
 }
