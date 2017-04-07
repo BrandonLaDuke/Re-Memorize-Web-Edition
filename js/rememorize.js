@@ -37,14 +37,17 @@ document.ready = GameStart();
 function GameStart() {
   print = "A friend once said,";
   Print();
-  Wait(500);
   print = "the memory of a single man is a fortress,";
   Print();
-  Wait(5000);
   print = "more complex than the vastest of cities.";
   Print();
   print = "We invented a key for that fortress.";
   Print();
+
+}
+
+function GetText() {
+  var getText = document.getElementById("");
 }
 
 function Print() {
@@ -52,12 +55,4 @@ function Print() {
   var text = document.createTextNode(print);
       createE.appendChild(text);
       document.getElementById("gameplay").appendChild(createE);
-}
-
-function Wait(ms){
-   var start = new Date().getTime();
-   var end = start;
-   while(end < start + ms) {
-     end = new Date().getTime();
-  }
 }

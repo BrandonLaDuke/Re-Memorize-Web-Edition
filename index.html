@@ -91,6 +91,14 @@
         max-width: 1200px;
         margin: auto;
       }
+      #textBox {
+        width: 100%;
+        font-size: 1.3em;
+        background-color: var(--app-secondary-color);
+        color: var(--app-primary-color);
+        border: none;
+        border-bottom: 2px solid var(--app-primary-color);
+      }
     </style>
   </head>
   <body>
@@ -114,8 +122,10 @@
 
         <div id="game">
           <div id="gameplay"></div>
+          <div class="input">
+            <input id="textBox" type="text" name="" value="">
+          </div>
         </div>
-
       </app-header-layout>
     </app-drawer-layout>
 
