@@ -40,8 +40,6 @@ function GameStart() {
   Print();
   Print("Press Enter to continue.");
   Read();
-  Clear();
-  Print("Hello");
 }
 
 function Clear() {
@@ -56,8 +54,13 @@ function Read() {
   document.onkeypress = function (e) {
     e.keyCode = 13 || window.event;
     // use e.keyCode
-    Print("Whatup?");
+    Print("What's up?");
   };
+}
+
+function UpdateScroll() {
+    var element = document.getElementById("gameplay");
+    element.scrollTop = element.scrollHeight;
 }
 
 function Print(print) {
@@ -72,4 +75,5 @@ function Print(print) {
     document.getElementById("gameplay").appendChild(createE);
   }
   //Scroll after input
+  UpdateScroll();
 }
