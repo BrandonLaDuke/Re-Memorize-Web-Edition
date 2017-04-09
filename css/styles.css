@@ -1,0 +1,35 @@
+.Login {
+  color: var(--app-primary-color);
+  vertical-align: middle;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  width:300px;
+  margin-top: 30px;
+}
+
+.Login input{
+  display: block;
+  font-size: 1.3em;
+  background-color: var(--app-secondary-color);
+  color: var(--app-primary-color);
+  border: none;
+  border-bottom: 2px solid var(--app-primary-color);
+  margin:20px 0;
+  width:100%;
+}
+
+#startGame {
+  border: 2px solid var(--app-primary-color);
+  padding: 20px;
+  width:100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  color: var(--app-primary-color);
+}
+#startGame:hover {
+  background-color: #003300;
+  cursor: hand;
+  cursor: pointer;
+}

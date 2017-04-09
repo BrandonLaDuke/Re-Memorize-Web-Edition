@@ -1,5 +1,4 @@
 //Varribles
-var playerName = "";
 var maxHealth = 100;
 var playerHealth = maxHealth;
 var genRef = "";
@@ -28,7 +27,32 @@ var satPatch2 = false;
 // Passcode
 var passcode = "";
 // Start Game
-document.ready = GameStart();
+function LoginCheck() {
+  var playerName = document.getElementById("userName").value;
+  var playerAge = document.getElementById("userAge").value;
+  var playerGender = document.getElementById("userGender").value.toLowerCase();
+console.log(playerName);
+  if (playerAge < 13) {
+    //Your too young to play.
+    console.log("Your to young")
+  } else {
+    if (playerGender == "male") {
+      console.log("your a boy!")
+      genRef = "";
+      genRef1 = "";
+      genRef2 = "";
+      genRef3 = "";
+    } else if (playerGender == "female") {
+      console.log("your a girl!");
+      genRef = "";
+      genRef1 = "";
+      genRef2 = "";
+      genRef3 = "";
+    } else {
+      // Please input your gender
+    }
+  }
+}
 
 
 // Game start
@@ -42,19 +66,11 @@ function GameStart() {
   Read();
 }
 
-function Clear() {
-  document.onkeypress = function (e) {
-    e.keyCode = 13 || window.event;
-    // use e.keyCode
-    document.getElementById("gameplay").innerHTML("");
-  };
-}
-
 function Read() {
   document.onkeypress = function (e) {
-    e.keyCode = 13 || window.event;
-    // use e.keyCode
-    Print("What's up?");
+    if (e.keyCode = 13) {
+      Print("What's up?");
+    };
   };
 }
 
