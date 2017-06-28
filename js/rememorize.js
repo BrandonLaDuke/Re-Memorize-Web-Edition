@@ -42,12 +42,18 @@ console.log(playerName);
       genRef1 = "";
       genRef2 = "";
       genRef3 = "";
+      document.getElementById('login').className += " hide";
+      document.getElementById('term').classList.remove("hide");
+      GameStart();
     } else if (playerGender == "female") {
       console.log("your a girl!");
       genRef = "";
       genRef1 = "";
       genRef2 = "";
       genRef3 = "";
+      document.getElementById('login').className += " hide";
+      document.getElementById('term').classList.remove("hide");
+      GameStart();
     } else {
       // Please input your gender
     }
@@ -67,11 +73,17 @@ function GameStart() {
 }
 
 function Read() {
-  document.onkeypress = function (e) {
-    if (e.keyCode = 13) {
-      Print("What's up?");
+  document.onkeypress = function(e) {
+    if (e.keyCode === 13) {
+      var textBox = document.getElementById('textBox').value;
+      Print(textBox);
+      textBox === "";
     };
   };
+}
+
+function PathChoice() {
+
 }
 
 function UpdateScroll() {
@@ -91,5 +103,5 @@ function Print(print) {
     document.getElementById("gameplay").appendChild(createE);
   }
   //Scroll after input
-  UpdateScroll();
+  // UpdateScroll();
 }
